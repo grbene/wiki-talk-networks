@@ -1,0 +1,21 @@
+'Do this in PAWS Jupyter notebook'
+#add package
+import pywikibot
+site = pywikibot.Site('en', 'wikipedia')
+
+#import list of most edited talk pages and view list of page ids
+import pandas
+dat = pandas.read_csv('mosteditedtalkpages_2016.csv', header= 0)
+page_ids = dat.page_id.tolist()
+print(page_ids)
+
+'Now, repeat for 2017'
+
+import pywikibot
+site = pywikibot.Site('en', 'wikipedia')
+
+#import list of most edited talk pages and view list of page ids
+import pandas
+dat = pandas.read_csv('mosteditedtalkpages_2017.csv', header= 0)
+page_ids = dat.page_id.tolist()
+print(page_ids)
